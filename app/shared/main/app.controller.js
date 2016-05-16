@@ -41,6 +41,6 @@ angular.module("app")
           .then(function () {
             $log.debug("toggle " + navID + " is done");
           });
-      }
+      };
     }
   });

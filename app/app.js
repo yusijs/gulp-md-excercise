@@ -6,6 +6,6 @@ angular.module("app", ['ngMaterial', 'ui.router'])
       url: "/",
       templateUrl: "/app/home/home.view.html"
     }
-  )
+  );
   $urlRouterProvider.otherwise("/");
-})
+});

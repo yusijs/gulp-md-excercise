@@ -11,6 +11,7 @@ var gulp = require('gulp')
 , sass = require('gulp-sass')
 , del = require("del")
 , inject = require("gulp-inject")
+, jshint = require('gulp-jshint')
 , server = require('gulp-server-livereload');
 
 var vendorJs = [
@@ -27,11 +28,11 @@ var vendorJs = [
 gulp.task('js', function () {
   return gulp.src(['app/*.js', 'app/**/*.js'])
     .pipe(sourcemaps.init())
-      .pipe(concat('app.js'))
-      .pipe(ngAnnotate())
-      .pipe(uglify().on('error', function(e){
-            console.log(e);
-         }))
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(concat('app.js'))
+    .pipe(ngAnnotate())
+    .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist'))
 })
