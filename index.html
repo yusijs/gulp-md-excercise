@@ -1,0 +1,49 @@
+<html ng-app="app" lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excercise</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- build:dev -->
+  <link rel="stylesheet" type="" href="node_modules/angular-material/angular-material.css">
+  <!-- endbuild -->
+
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+
+<body ng-controller="AppCtrl" ng-cloak>
+
+  <toolbar></toolbar>
+  
+  <sidenav></sidenav>
+  
+  
+  <section layout="row" flex>
+    <md-content flex layout-padding>
+      <div layout="column" layout-fill layout-align="top center" ui-view></div>
+      <div flex></div>
+    </md-content>
+  </section>
+
+  <!-- inject:js -->
+  <!-- endinject -->
+
+  <!-- build:dev -->
+  <script src="node_modules/angular/angular.js"></script>
+  <script src='node_modules/angular-animate/angular-animate.js'></script>
+  <script src='node_modules/angular-aria/angular-aria.js'></script>
+  <script src='node_modules/angular-messages/angular-messages.js'></script>
+  <script src='node_modules/angular-material//angular-material.js'></script>
+  <script src='node_modules/angular-ui-router/release/angular-ui-router.js'></script>
+
+  <script src="app/app.js"></script>
+  <script src="app/home/home.controller.js"></script>
+  <script src="app/shared/main/app.controller.js"></script>
+  <script src="app/shared/navbar/navbar.controller.js"></script>
+  <script src="app/shared/navbar/toolbar.directive.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>
